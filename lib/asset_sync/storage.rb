@@ -124,7 +124,8 @@ module AssetSync
       #local_files_to_upload = local_files - remote_files
 
       # Upload new files
-      local_files_to_upload.each do |f|
+      #local_files_to_upload.each do |f|
+      local_files.each do |f|
         next unless File.file? "#{path}/#{f}" # Only files.
         upload_file f
       end
